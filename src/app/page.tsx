@@ -1,8 +1,9 @@
+import Banner from "@/components/Banner";
 
 export default function Home() {
   return (
     <>
-    welcome to  my eLib
+    <Banner/>
     </>
   );
 }
