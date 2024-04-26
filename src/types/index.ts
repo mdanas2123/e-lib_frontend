@@ -5,8 +5,11 @@ export type Book = {
     coverImage: string;
     file: string;
     author: Author;
+    authorName: string;
+
 };
 
 export type Author = {
     name: string;
+    authorName: string;
 };
