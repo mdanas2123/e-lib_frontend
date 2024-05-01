@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,9 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ThemeProvider
+           attribute="class"
+           defaultTheme="system"
+           enableSystem
+           disableTransitionOnChange
+         >
         <Navbar/>
         {children}
         <Footer/>
+        </ThemeProvider>
         </body>
     </html>
   );
