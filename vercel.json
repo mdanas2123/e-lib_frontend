@@ -1,16 +1,16 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "next.config.js",
-        "use": "@vercel/next"
-      }
-    ],
-    "rewrites": [
-      {
-        "source": "/api/:path*",
-        "destination": "Backend_URL/:path*"
-      }
-    ]
-  }
-  
+  "redirects": [
+    {
+      "source": "/specific/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "page",
+          "value": "home"
+        }
+      ],
+      "permanent": false,
+      "destination": "/another/:path*"
+    }
+  ]
+}
