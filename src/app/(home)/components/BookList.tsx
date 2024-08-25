@@ -4,7 +4,7 @@ import { Book } from "@/types";
 
 const BookList = async () => {
   // data fetching
-  const response = await fetch(`${process.env.BACKEND_URL}/books`, {
+  const response = await fetch(`${process.env.BACKEND_URL}/api/books`, {
     cache: "no-store",
   });
 
